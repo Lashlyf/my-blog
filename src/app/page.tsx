@@ -1,3 +1,4 @@
+import { Card } from "@/components/ui/card";
 import { simpleBlogCard } from "./lib/interface";
 import { client } from "./lib/sanity";
 
@@ -12,14 +13,16 @@ async function getData(){
 }
 
 export default async function Home() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const data:simpleBlogCard = await getData();
-
+  
+  const data: simpleBlogCard[] = await getData();
+console.log(data);
   return (
     <div className="grid grid-cols-1 lg:grid-cols-4 mt-5">
-      {data.map((post)=>{
-        
-      })}
+      {data.map((post,idx)=>(
+        <Card key={idx}>
+          {/* <Image src={}/> */}
+        </Card>
+      ))}
       
     </div>
   );
