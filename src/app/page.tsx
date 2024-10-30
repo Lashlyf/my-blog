@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { simpleBlogCard } from "./lib/interface";
-import { client } from "./lib/sanity";
+import { client, urlFor } from "./lib/sanity";
 
 async function getData(){
   const query =`
@@ -20,7 +20,7 @@ console.log(data);
     <div className="grid grid-cols-1 lg:grid-cols-4 mt-5">
       {data.map((post,idx)=>(
         <Card key={idx}>
-          {/* <Image src={}/> */}
+          <Image src={urlFor(post.image).url()}/>
         </Card>
       ))}
       
