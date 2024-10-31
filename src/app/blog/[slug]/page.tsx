@@ -1,5 +1,5 @@
 export default function BlogArticle(){
-    return
+    return(
         <h1>Hello</h1>
-    
+    )
 }
