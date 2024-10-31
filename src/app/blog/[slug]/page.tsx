@@ -1,5 +1,8 @@
-export default function BlogArticle(){
+export default function BlogArticle({params}:{
+    params:{
+        slug:string;
+    }}){
     return(
-        <h1>Hello</h1>
+        <h1>{params.slug}</h1>
     )
 }

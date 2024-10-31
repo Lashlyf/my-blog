@@ -29,7 +29,7 @@ console.log(data);
           <CardContent className="mt-5">
             <h3 className="text-lg line-clamp-2 font-bold">{post.title}</h3>
             <Button asChild className="w-full mt-2">
-              <Link href={'/blog/${post.currentSlug}'}>Read More</Link>
+              <Link href={`/blog/${post.current}`}>Read More</Link>
             </Button>
           </CardContent>
         </Card>
