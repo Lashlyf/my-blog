@@ -10,4 +10,5 @@ export interface fullBlog{
     current:string;
     title:string;
     image:any;
+    body:any;
 }
