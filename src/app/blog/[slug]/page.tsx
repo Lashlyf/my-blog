@@ -30,7 +30,7 @@ export default async function BlogArticle({params}:{
             </h1>
             <Image src={urlFor(data.image).url()} alt="Default image" height={800} width={800} priority className="rounded-lg border mt-4"/>
 
-            <div className="mt-12">
+            <div className="mt-12 prose prose-stone prose-xl dark:prose-invert">
                 <PortableText value={data.body}/>
             </div>
             
